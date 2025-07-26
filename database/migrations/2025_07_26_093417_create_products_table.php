@@ -15,6 +15,7 @@ return new class extends Migration {
             $table->string('name');
             $table->text('description')->nullable();
             $table->decimal('price', 10, 2);
+            $table->unsignedInteger('stock_quantity')->default(0);
             $table->unsignedInteger('barcode')->unique()->nullable();
             $table->timestamps();
             $table->softDeletes();
