@@ -14,6 +14,7 @@ return new class extends Migration {
             $table->id();
             $table->string('name');
             $table->text('description')->nullable();
+            $table->string('sku')->unique();
             $table->decimal('price', 10, 2);
             $table->unsignedInteger('stock_quantity')->default(0);
             $table->unsignedInteger('barcode')->unique()->nullable();
